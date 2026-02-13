@@ -144,9 +144,7 @@
       <div class="tagline">Updates, deadlines, and announcements</div>
     </div>
 
-    <!-- Students should convert this into <nav> containing a real list (<ul><li><a>) -->
-
-  <!-- I used <nav> for nav because t is meant for navigation links -->
+    <!-- I used <nav> for the menu links because it contains the main navigation -->
     <nav id="nav">
       <ul>
         <li><a href="#">Home</a></li>
@@ -157,30 +155,36 @@
     </nav>
 
     <div class="layout">
-    <!-- I used <main> for content because ___ -->
+
+      <!-- I used <main> for the main content because it contains the primary posts users are meant to read -->
 
       <main id="content">
 
         <!-- Students should convert each .post into an <article> with an <h2> -->
 
-      <!-- I used <article> for post because ___ -->
-        <h1 class="title">Registration Reminder</h1>
+          <!-- I used <article> for each post because “Registration Reminder” and “Library Workshop” are standalone pieces of content -->
 
-        <article class="post">
+        <div class="title">Registration Reminder</div>
+
+        <h2><article class="post">
           <!-- Students should convert this into headings (h1/h2) and fix hierarchy -->
+
             <div class="meta">Posted Feb 12</div>
             <div class="text"></div>
             Course registration closes Friday. Meet with your advisor if you have holds.
           </div>
-        </article>
 
-        <article class="post">
-          <h2><div class="title">Library Workshop</div></h2>
+        </article></h2>
+
+        <h2><article class="post">
+
+          <div class="title">Library Workshop</div>
           <div class="meta">Posted Feb 10</div>
           <div class="text">
             A research skills workshop is available this week. Limited seats.
           </div>
-        </article>
+
+        </article></h2>
 
       </main>
 
@@ -192,10 +196,12 @@
         <div class="box">
           <div class="title">Related Links</div>
           <!-- Students should convert these into a real list -->
-          Advising Hours<br>
+
+        <ul>
+          <li>Advising Hours</li>
           Academic Calendar<br>
           IT Help Desk
-        </div>
+        </ul>
 
         <div class="box">
           <div class="title">Contact</div>
