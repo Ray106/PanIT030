@@ -137,69 +137,58 @@
 
 <body>
   <div class="container">
-<!-- I used <header> for header because ___ -->
 
     <header id="header">
       <div class="logo">Hofstra Student Services</div>
       <div class="tagline">Updates, deadlines, and announcements</div>
-    </div>
+    </header>
 
-    <!-- I used <nav> for the menu links because it contains the main navigation -->
+    <!-- Students should convert this into <nav> containing a real list (<ul><li><a>) -->
     <nav id="nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+        <li><a href="#">Home</a>
+        <a href="#">Announcements</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a></li>
+    </ul>
     </nav>
 
     <div class="layout">
-
-      <!-- I used <main> for the main content because it contains the primary posts users are meant to read -->
-
       <main id="content">
 
         <!-- Students should convert each .post into an <article> with an <h2> -->
 
-          <!-- I used <article> for each post because “Registration Reminder” and “Library Workshop” are standalone pieces of content -->
+        <h1><div class="title">Registration Reminder</div></h1>
 
         <h2><article class="post">
           <!-- Students should convert this into headings (h1/h2) and fix hierarchy -->
-            <div class="title">Registration Reminder</div>
-            <div class="meta">Posted Feb 12</div>
-            <div class="text"></div>
+          <div class="meta">Posted Feb 12</div>
+          <div class="text">
             Course registration closes Friday. Meet with your advisor if you have holds.
           </div>
-
         </article></h2>
+        
+        <h1><div class="title">Library Workshop</div></h1>
 
         <h2><article class="post">
-
-          <div class="title">Library Workshop</div>
           <div class="meta">Posted Feb 10</div>
           <div class="text">
             A research skills workshop is available this week. Limited seats.
           </div>
-
         </article></h2>
 
       </main>
 
       <!-- Students should convert this into <aside> -->
-      <!-- I used <aside> for sidebar because it can pust the sidebar to the right postion -->
-
       <aside id="sidebar">
 
         <div class="box">
           <div class="title">Related Links</div>
           <!-- Students should convert these into a real list -->
-
-        <ul>
-          <li>Advising Hours</li>
+          Advising Hours<br>
           Academic Calendar<br>
           IT Help Desk
-        </ul>
+        </div>
 
         <div class="box">
           <div class="title">Contact</div>
