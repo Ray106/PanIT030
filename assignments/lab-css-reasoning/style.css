@@ -1,4 +1,5 @@
-body p {
+<style>
+p {
 color: red;
 }
 
@@ -11,3 +12,4 @@ color: pink;
 #special {
 color: black;
 }
+</style>
