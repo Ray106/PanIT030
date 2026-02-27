@@ -7,12 +7,12 @@ body p.highlight {
 color: blue;
 }
 
+body p.highlight {
+color: green;
+}
+
 
 #special {
 color: black;
-}
-
-body p.highlight {
-color: green;
 }
 
