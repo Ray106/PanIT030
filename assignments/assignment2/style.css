@@ -2,3 +2,28 @@
   width: 200px;
   height: auto;
 }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.4;
+      margin: 0;
+      background: #f5f6f8;
+      color: #222;
+    }
+
+    /* Heading styling works whether students convert div titles to h1/h2 */
+    h1 {
+      font-size: 22px;
+      margin: 0 0 6px 0;
+    }
+    h2 {
+      font-size: 18px;
+      margin: 0 0 6px 0;
+    }
+    p {
+      line-height: 1.6;
+    }
+    
+    a {
+      color: blue;
+    }
