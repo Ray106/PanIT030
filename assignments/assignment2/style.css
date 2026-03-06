@@ -1,6 +1,21 @@
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+main {
+  position: relative;
+}
+
 .profile-img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   width: 200px;
   height: auto;
+  z-index: 1;
 }
 
     body {
@@ -9,12 +24,14 @@
       margin: 0;
       background: #f5f6f8;
       color: #222;
+      padding-top: 120px;
     }
 
-    /* Heading styling works whether students convert div titles to h1/h2 */
     h1 {
       font-size: 22px;
       margin: 0 0 6px 0;
+      position: relative;
+      z-index: 2;
     }
     h2 {
       color: darkblue;
