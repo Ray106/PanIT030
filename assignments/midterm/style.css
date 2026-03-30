@@ -1,1 +1,26 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
 
+header {
+padding: 20px;
+}
+
+nav a {
+margin-right: 10px;
+}
+
+main {
+padding: 20px;
+}
+
+.section-box {
+border: 1px solid black;
+padding: 10px;
+margin-bottom: 15px;
+}
+
+footer {
+padding: 20px;
+}
