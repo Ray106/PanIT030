@@ -42,6 +42,17 @@ margin-bottom: 15px;
 border-radius: 8px;
 }
 
+.two-column {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.two-column > div {
+flex: 1;
+min-width: 250px;
+}
+
 footer {
 padding: 20px;
 text-align: center;
