@@ -15,20 +15,36 @@ justify-content: space-between;
 align-items: center;
 flex-wrap: wrap;}
 
+nav {
+  display: flex;
+}
+
 nav a {
 margin-right: 10px;
 }
 
 main {
 padding: 20px;
+max-width: 1000px;
+margin: 0 auto;
 }
 
 .section-box {
+background: white;
 border: 1px solid black;
 padding: 10px;
 margin-bottom: 15px;
+border-radius: 8px;
 }
 
 footer {
 padding: 20px;
+text-align: center;
+background: #ddd;
+}
+
+img {
+max-width: 100%;
+height: auto;
+border-radius: 8px;
 }
