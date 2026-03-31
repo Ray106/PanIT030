@@ -3,12 +3,12 @@ font-family: "IBM Plex Serif", serif;
 margin: 0;
 font-family: Arial, sans-serif;
 line-height: 1.6;
-background-color: #FCFFFD;
-color: #5D737E;
+background-color: #3E5641;
+color: #282B28;
 }
 
 header {
-background-color: #64B6AC;
+background-color: #A24936;
 color: #FCFFFD;
 padding: 20px;
 display: flex;
@@ -36,7 +36,7 @@ margin: 0 auto;
 }
 
 .section-box {
-background: #DAFFEF;
+background: #83BCA9;
 border: 1px solid black;
 padding: 10px;
 margin-bottom: 15px;
@@ -46,7 +46,7 @@ border-radius: 8px;
 footer {
 padding: 20px;
 text-align: center;
-background: #C0FDFB;
+background: #282B28;
 }
 
 img {
