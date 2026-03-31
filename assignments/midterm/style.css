@@ -1,7 +1,7 @@
 body {
 font-family: "IBM Plex Serif", Arial, sans-serif;
-margin: 0;
-line-height: 1.6;
+margin: 0;  /* don't need white space out side the elements */
+line-height: 1.6; /* increase readability */
 background-color: #E7DDCF;
 color: #2F241D;
 }
@@ -9,26 +9,26 @@ color: #2F241D;
 header {
 background-color: #7A4E3A;
 color: #F7F1E8;
-padding: 20px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;}
+padding: 20px; /* space between content and bordar */
+display: flex; /* display header as flexbox, turn it to horizontal */
+justify-content: space-between; /* make header 1 to the left, nav to the left, create space in the middle */
+align-items: center; /* center context vertical */
+flex-wrap: wrap;} /* allows page content move to new line if window gets small */
 
 h1, h2 {
-font-weight: 700;
+font-weight: 700; /* make front bold increase readability*/
 }
 
 nav {
-  display: flex;
+  display: flex; /* make page guide horizontally by using flexbox */
 }
 
-nav a {
+nav a /* to all the a in side nav */{
 color: #D8BE96;
-margin-right: 10px;
+margin-right: 10px; /* add 10 px right from the left one*/
 }
 
-main {
+main /* public web content starts from now */{
 padding: 20px;
 max-width: 1000px;
 margin: 0 auto;
@@ -36,7 +36,7 @@ margin: 0 auto;
 
 .section-box {
 background: #F3EADF;
-border: 1px #8B6A52;
+border: 1px solid #8B6A52;
 padding: 10px;
 margin-bottom: 15px;
 border-radius: 8px;
