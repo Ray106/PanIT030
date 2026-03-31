@@ -30,8 +30,8 @@ margin-right: 10px; /* add 10 px right from the left one*/
 
 main /* public web content starts from now */{
 padding: 20px;
-max-width: 1000px;
-margin: 0 auto;
+max-width: 1000px; /* set width limit*/
+margin: 0 auto; /* center*/
 }
 
 .section-box {
@@ -43,9 +43,9 @@ border-radius: 8px;
 }
 
 .two-column {
-display: flex;
-gap: 20px;
-flex-wrap: wrap;
+display: flex; /* make div horizontal*/
+gap: 20px; /* 20 px between each div*/
+flex-wrap: wrap; /* auto line change*/
 }
 
 .two-column > div {
