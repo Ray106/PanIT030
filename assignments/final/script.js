@@ -31,292 +31,121 @@
 
 // ============================================================
 //  PART 1 — YOUR DATA
-//
-//  An array of objects stores structured information.
-//  Each object { } represents one item and has named properties.
-//
-//  Your objects need exactly these three properties:
-//    name        — what the item is called (a string)
-//    category    — which group it belongs to (a string)
-//                  this MUST exactly match the <option> values
-//                  you set in interests.html — same spelling, same case
-//    description — a short sentence about it (a string)
-//
-//  How to read/write an object:
-//    { name: "HTML", category: "Language", description: "Markup for web pages" }
-//
-//  How to access a property:
-//    items[0].name        gives you the name of the first item
-//    items[2].category    gives you the category of the third item
-//
-//  TODO 1: Replace every "___" with your real data.
-//  Requirements:
-//    - At least 6 items total
-//    - At least 3 different categories
-//    - Each category must have at least 2 items
-//    - Category values must match your <option> values in the HTML
 // ============================================================
 
 const items = [
   {
-    name: "___",          // TODO 1 — item name
-    category: "___",      // TODO 1 — must match an <option> value exactly
-    description: "___"    // TODO 1 — one sentence description
+    name: "Animation Video Editing",
+    category: "Video Editing",
+    description: "I enjoy editing short animation videos because it combines timing, music, visual rhythm, and storytelling."
   },
   {
-    name: "___",
-    category: "___",
-    description: "___"
+    name: "Color and Mood",
+    category: "Video Editing",
+    description: "I like adjusting color, contrast, and pacing to make a video feel more polished and expressive."
   },
   {
-    name: "___",
-    category: "___",
-    description: "___"
+    name: "Cat Photography",
+    category: "Cat",
+    description: "I like taking photos of my cat because its expressions and movements feel natural and unpredictable."
   },
   {
-    name: "___",
-    category: "___",
-    description: "___"
+    name: "Cat Care",
+    category: "Cat",
+    description: "Taking care of a cat helps me notice small details, daily routines, and behavior changes."
   },
   {
-    name: "___",
-    category: "___",
-    description: "___"
+    name: "MotoGP Racing",
+    category: "Motorcycle",
+    description: "I am interested in MotoGP because it combines racing strategy, rider skill, speed, and motorcycle technology."
   },
   {
-    name: "___",
-    category: "___",
-    description: "___"
+    name: "Riding Culture",
+    category: "Motorcycle",
+    description: "Motorcycle culture interests me because it connects freedom, personal identity, travel, and technical skill."
   },
-  // You can add more objects here if you want
 ];
 
 
 // ============================================================
 //  PART 2 — THE RENDER FUNCTION
-//
-//  This function takes a list of items and draws them as
-//  cards on the page. It is called by filterItems() below.
-//
-//  It works in three steps:
-//    Step 1 — Find the container element on the page
-//    Step 2 — Clear whatever is currently inside it
-//    Step 3 — Loop through the list and build a card for each item
-//
-//  After rendering, it also updates the result count.
-//
-//  Read each TODO comment carefully before filling it in.
 // ============================================================
 
-function renderItems(list) {
+function renderItems(list) { // This function receives a list of items and displays them on the webpage.
 
-  // ── Step 1: Find the container ──────────────────────────────
-  //
-  //  document.getElementById("some-id") finds the element on the
-  //  page whose id attribute matches and returns it as a variable.
-  //
-  //  TODO 2: Fill in the id of the <div> in interests.html
-  //  where the cards should appear. Look at the HTML — what is its id?
+  const container = document.getElementById("items-container"); // Finds the HTML element where the item cards will appear.
 
-  const container = document.getElementById("___");  // TODO 2
+  container.innerHTML = ""; // Clears the old cards before showing the new filtered cards.
 
+  for (let i = 0; i < list.length; i++) { // Loops through every item in the list.
 
-  // ── Step 2: Clear the container ─────────────────────────────
-  //
-  //  Before drawing new cards, you must erase whatever is already there.
-  //  Setting innerHTML to an empty string "" wipes all child elements.
-  //
-  //  If you skip this step, old cards stay on the page every time
-  //  the user picks a new category — they pile up instead of replacing.
-  //
-  //  TODO 3: Clear the container before building new cards.
-  //  Hint: assign an empty string to container.innerHTML
+    const card = document.createElement("div"); // Creates a new div element for one item card.
+    card.className = "item-card"; // Adds the CSS class item-card so the card can be styled.
 
-  container.___ = "___";  // TODO 3
+    card.innerHTML = // Writes HTML content inside the card.
+      "<h3>" + list[i].name + "</h3>" + // Shows the item name as the card title.
+      "<p>"  + list[i].description + "</p>" + // Shows the item description as paragraph text.
+      "<span class='item-tag'>" + list[i].category + "</span>"; // Shows the item category as a small tag.
 
-
-  // ── Step 3: Loop and build cards ────────────────────────────
-  //
-  //  A for loop runs the code inside it once for each item.
-  //  The variable i is the current position (index) in the list.
-  //  It starts at 0 (first item) and counts up to list.length - 1.
-  //
-  //  Inside the loop:
-  //    list[i]             — the current item (one object)
-  //    list[i].name        — the name property of that item
-  //    list[i].category    — the category property
-  //    list[i].description — the description property
-  //
-  //  For each item, you will:
-  //    1. Create a new <div> element
-  //    2. Give it the CSS class "item-card"
-  //    3. Set its innerHTML to show the item's properties
-  //    4. Append it to the container
-  //
-  //  TODO 4a: Fill in the loop condition — what should i count up to?
-  //  TODO 4b: Fill in the three property accesses inside innerHTML
-  //  TODO 4c: Fill in the appendChild call
-
-  for (let i = 0; i < ___; i++) {  // TODO 4a — what is the length of?
-
-    const card = document.createElement("div");
-    card.className = "item-card";
-
-    // innerHTML lets you write HTML as a string.
-    // The + operator joins strings together.
-    // list[i].name accesses the name property of the current item.
-
-    card.innerHTML =
-      "<h3>" + list[i].___ + "</h3>" +             // TODO 4b — which property is the title?
-      "<p>"  + list[i].___ + "</p>" +              // TODO 4b — which property is the description?
-      "<span class='item-tag'>" + list[i].___ + "</span>";  // TODO 4b — which property is the label?
-
-    ___.appendChild(card);  // TODO 4c — which variable is the container?
+    container.appendChild(card); // Adds the finished card into the container on the page.
   }
 
-
-  // ── Update the result count ──────────────────────────────────
-  //
-  //  After building the cards, update the result count paragraph
-  //  to show how many items are currently displayed.
-  //
-  //  list.length gives you the number of items in the list
-  //  that was passed into this function (already filtered).
-  //
-  //  TODO 5a: Fill in the id of the result count element
-  //  TODO 5b: Fill in what gives you the number of items shown
-
-  document.getElementById("___").textContent =   // TODO 5a
-    ___ + " items shown";                         // TODO 5b — what holds the count?
+  document.getElementById("result-count").textContent = // Finds the result count paragraph and changes its text.
+    list.length + " items shown"; // Shows how many items are currently displayed.
 }
 
 
 // ============================================================
 //  PART 3 — THE FILTER FUNCTION
-//
-//  This function runs every time the user picks a category
-//  from the dropdown menu. The HTML calls it like this:
-//    onchange="filterItems(this.value)"
-//  where this.value is the value of the selected <option>.
-//
-//  A switch statement checks one value against multiple cases.
-//  It is cleaner than a long if/else chain when you know
-//  exactly which values to expect.
-//
-//  Structure:
-//    switch (someValue) {
-//      case "exact match":
-//        // code for this case
-//        break;
-//      case "another match":
-//        // code for this case
-//        break;
-//      default:
-//        // runs if nothing matched
-//    }
-//
-//  IMPORTANT: Every case needs a break statement at the end.
-//  Without break, JavaScript falls through and runs the next
-//  case too — which is almost never what you want.
-//
-//  In this function:
-//    - Each case matches one of your category values
-//    - Inside each case, build a filtered array by looping
-//      through items and collecting only the matching ones
-//    - Then call renderItems() with that filtered array
-//    - The empty string "" case ("All") passes the full array
-//
-//  TODO 6a: Fill in the parameter name in the function signature
-//           (the word in the parentheses — this is what receives
-//           the selected category value from the dropdown)
-//  TODO 6b: Fill in the switch target — what value are you switching on?
-//  TODO 6c: Add a case for each of your categories
-//  TODO 6d: Inside each case, build a filtered array and call renderItems
-//  TODO 6e: Fill in the default case
 // ============================================================
 
-function filterItems(___) {  // TODO 6a — name the parameter
+function filterItems(category) { // This function receives the category selected by the user.
 
-  switch (___) {             // TODO 6b — what are you switching on?
+  switch (category) { // Checks which category value was selected.
 
-    case "":
-      // Empty string means the user selected "All"
-      // Pass the full items array — no filtering needed
-      renderItems(items);
-      break;
+    case "": // Empty value means the user selected All.
+      renderItems(items); // Shows every item in the full items array.
+      break; // Stops this case from running into the next case.
 
-    case "___":              // TODO 6c — your first category value (must match <option> value)
-      // Build a filtered list for this category
-      //
-      // How filtering works:
-      //   1. Start with an empty array
-      //   2. Loop through all items
-      //   3. If the item's category matches this case, add it to the array
-      //   4. Pass the result to renderItems()
-      //
-      // The push() method adds an item to the end of an array:
-      //   myArray.push(someValue)
-      //
-      // TODO 6d: Complete the filtering logic for this case
-
-      const filtered1 = [];
-      for (let i = 0; i < items.length; i++) {
-        if (items[i].category === "___") {  // TODO 6d — which category?
-          filtered1.push(items[i]);
+    case "Video Editing": // First category case.
+      const filtered1 = []; // Creates an empty array to store matching items.
+      for (let i = 0; i < items.length; i++) { // Loops through every item in the full items array.
+        if (items[i].category === "Video Editing") { // Checks whether the current item's category matches this case.
+          filtered1.push(items[i]); // Adds the matching item into the filtered array.
         }
       }
-      renderItems(filtered1);
-      break;
+      renderItems(filtered1); // Displays only the items in the filtered array.
+      break; // Stops this case.
 
-    case "___":              // TODO 6c — your second category value
-      // TODO 6d: Same pattern as above — build filtered array and render
-
-      const filtered2 = [];
-      for (let i = 0; i < items.length; i++) {
-        if (items[i].category === "___") {  // TODO 6d
-          filtered2.push(items[i]);
+    case "Cat": // Second category case.
+      const filtered2 = []; // Creates an empty array to store matching items.
+      for (let i = 0; i < items.length; i++) { // Loops through every item in the full items array.
+        if (items[i].category === "Cat") { // Checks whether the current item's category matches this case.
+          filtered2.push(items[i]); // Adds the matching item into the filtered array.
         }
       }
-      renderItems(filtered2);
-      break;
+      renderItems(filtered2); // Displays only the items in the filtered array.
+      break; // Stops this case.
 
-    case "___":              // TODO 6c — your third category value
-      // TODO 6d: Same pattern
-
-      const filtered3 = [];
-      for (let i = 0; i < items.length; i++) {
-        if (items[i].category === "___") {  // TODO 6d
-          filtered3.push(items[i]);
+    case "Motorcycle": // Third category case.
+      const filtered3 = []; // Creates an empty array to store matching items.
+      for (let i = 0; i < items.length; i++) { // Loops through every item in the full items array.
+        if (items[i].category === "Motorcycle") { // Checks whether the current item's category matches this case.
+          filtered3.push(items[i]); // Adds the matching item into the filtered array.
         }
       }
-      renderItems(filtered3);
-      break;
+      renderItems(filtered3); // Displays only the items in the filtered array.
+      break; // Stops this case.
 
-    default:
-      // This runs if the selected value does not match any case above.
-      // As a safe fallback, show everything.
-      //
-      // TODO 6e: Call renderItems with the full items array
-
-      renderItems(___);  // TODO 6e
-      break;
+    default: // Runs if the selected value does not match any case above.
+      renderItems(items); // Shows the full list as a safe fallback.
+      break; // Stops the default case.
   }
 }
 
 
 // ============================================================
 //  PART 4 — RUN ON LOAD
-//
-//  When the page first loads, the dropdown shows "All"
-//  but nothing is rendered yet — because the filter function
-//  only runs when the user changes the dropdown.
-//
-//  This line calls filterItems with an empty string ""
-//  so all items appear immediately when the page opens.
-//
-//  No changes needed here. But be ready to explain in your
-//  presentation: WHY does this line need to be at the bottom
-//  of this file, after the functions above are defined?
 // ============================================================
 
-filterItems("");
+filterItems(""); // Runs the filter once when the page loads so All items appear immediately.
