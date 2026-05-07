@@ -9,7 +9,7 @@ color: #2F241D;
 header {
 background-color: #7A4E3A;
 color: #F7F1E8;
-padding: 20px; /* space between content and bordar */
+padding: 10px 20px; /* space between content and bordar */
 display: flex; /* display header as flexbox, turn it to horizontal */
 justify-content: space-between; /* make header 1 to the left, nav to the left, create space in the middle */
 align-items: center; /* center context vertical */
