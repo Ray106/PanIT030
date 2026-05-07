@@ -20,18 +20,62 @@ font-weight: 700; /* make front bold increase readability*/
 }
 
 nav {
-  display: flex; /* make page guide horizontally by using flexbox */
+display: flex; /* make page guide horizontally by using flexbox */
+gap: 12px; /* New: creates even spacing between navigation links */
 }
 
 nav a /* to all the a in side nav */{
 color: #D8BE96;
 margin-right: 10px; /* add 10 px right from the left one*/
+text-decoration: none; /* New: removes default underline for cleaner navigation */
+}
+
+nav a:hover {
+color: #F7F1E8; /* New: makes navigation interaction clearer when users hover */
 }
 
 main /* public web content starts from now */{
 padding: 20px;
 max-width: 1000px; /* set width limit*/
 margin: 0 auto; /* center*/
+}
+
+.home-layout {
+padding: 0; /* New: removes normal main padding so the home image can reach the left side */
+max-width: none; /* New: allows the home page layout to use the full screen width */
+min-height: 75vh; /* New: gives the home layout enough vertical height */
+display: flex; /* New: creates the left image and right content layout */
+}
+
+.home-image-section {
+flex: 1; /* New: makes the image side take half of the home layout */
+}
+
+.home-main-image {
+width: 100%; /* New: makes the image fill the left column */
+height: 100%; /* New: makes the image fill the full height of the section */
+object-fit: cover; /* New: crops the image neatly instead of stretching it */
+display: block; /* New: removes extra space under the image */
+border-radius: 0; /* New: removes rounded corners because this is a full-side image */
+margin: 0; /* New: removes the global image centering on the homepage image */
+max-width: none; /* New: overrides the global img max-width setting */
+}
+
+.home-content-section {
+flex: 1; /* New: makes the text side take the other half of the home layout */
+padding: 60px; /* New: adds breathing room around Welcome and Featured */
+display: flex; /* New: allows Welcome and Featured to stack cleanly */
+flex-direction: column; /* New: places Welcome above Featured */
+justify-content: center; /* New: centers the text sections vertically */
+gap: 25px; /* New: creates space between Welcome and Featured */
+}
+
+.welcome-section {
+margin-bottom: 0; /* New: removes extra bottom margin inside the home layout */
+}
+
+.featured-section {
+margin-bottom: 0; /* New: removes extra bottom margin inside the home layout */
 }
 
 .section-box {
@@ -62,10 +106,34 @@ background: #5B4638;
 color: #F3EADF;
 }
 
+.home-footer {
+text-align: right; /* New: makes the homepage footer visually sit on the lower right */
+padding-right: 60px; /* New: aligns the footer with the right content section */
+}
+
 img {
 display: block;
 margin: 0 auto;
 max-width: 30%;
 height: auto;
 border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+.home-layout {
+flex-direction: column; /* New: stacks image and text on smaller screens */
+}
+
+.home-main-image {
+height: 350px; /* New: keeps the image visible without taking the whole mobile page */
+}
+
+.home-content-section {
+padding: 30px; /* New: reduces padding on smaller screens */
+}
+
+.home-footer {
+text-align: center; /* New: centers footer on small screens for cleaner layout */
+padding-right: 20px; /* New: matches normal footer spacing on small screens */
+}
 }
