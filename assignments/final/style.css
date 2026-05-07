@@ -4,6 +4,7 @@ margin: 0;  /* don't need white space out side the elements */
 line-height: 1.6; /* increase readability */
 background-color: #E7DDCF;
 color: #2F241D;
+font-size: 18px;
 }
 
 header {
@@ -17,6 +18,15 @@ flex-wrap: wrap;} /* allows page content move to new line if window gets small *
 
 h1, h2 {
 font-weight: 700; /* make front bold increase readability*/
+}
+
+h1 {
+font-size: 2.2rem; /* New: increases the main site title size across the website */
+margin: 0; /* New: removes default h1 spacing so the header stays shorter */
+}
+
+h2 {
+font-size: 2rem; /* New: increases section title size across the website */
 }
 
 nav {
@@ -63,10 +73,10 @@ max-width: none; /* New: overrides the global img max-width setting */
 
 .home-content-section {
 flex: 1; /* New: makes the text side take the other half of the home layout */
-padding: 60px; /* New: adds breathing room around Welcome and Featured */
+padding: 35px 60px; /* New: adds breathing room around Welcome and Featured */
 display: flex; /* New: allows Welcome and Featured to stack cleanly */
 flex-direction: column; /* New: places Welcome above Featured */
-justify-content: center; /* New: centers the text sections vertically */
+justify-content: flex-start; /* New: centers the text sections vertically */
 gap: 25px; /* New: creates space between Welcome and Featured */
 }
 
@@ -81,7 +91,7 @@ margin-bottom: 0; /* New: removes extra bottom margin inside the home layout */
 .section-box {
 background: #F3EADF;
 border: 1px solid #8B6A52;
-padding: 10px;
+padding: 28px;
 margin-bottom: 15px;
 border-radius: 8px;
 }
