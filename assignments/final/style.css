@@ -1,0 +1,71 @@
+body {
+font-family: "IBM Plex Serif", Arial, sans-serif;
+margin: 0;  /* don't need white space out side the elements */
+line-height: 1.6; /* increase readability */
+background-color: #E7DDCF;
+color: #2F241D;
+}
+
+header {
+background-color: #7A4E3A;
+color: #F7F1E8;
+padding: 20px; /* space between content and bordar */
+display: flex; /* display header as flexbox, turn it to horizontal */
+justify-content: space-between; /* make header 1 to the left, nav to the left, create space in the middle */
+align-items: center; /* center context vertical */
+flex-wrap: wrap;} /* allows page content move to new line if window gets small */
+
+h1, h2 {
+font-weight: 700; /* make front bold increase readability*/
+}
+
+nav {
+  display: flex; /* make page guide horizontally by using flexbox */
+}
+
+nav a /* to all the a in side nav */{
+color: #D8BE96;
+margin-right: 10px; /* add 10 px right from the left one*/
+}
+
+main /* public web content starts from now */{
+padding: 20px;
+max-width: 1000px; /* set width limit*/
+margin: 0 auto; /* center*/
+}
+
+.section-box {
+background: #F3EADF;
+border: 1px solid #8B6A52;
+padding: 10px;
+margin-bottom: 15px;
+border-radius: 8px;
+}
+
+.two-column {
+display: flex; /* make div horizontal*/
+gap: 20px; /* 20 px between each div*/
+flex-wrap: wrap; /* auto line change*/
+}
+
+.two-column > div {
+  /*used the child selector to target only the direct columns, 
+  so it doesn't affect nested elements inside.*/
+flex: 1; /*makes it devied it evenly*/
+min-width: 250px;
+}
+
+footer {
+padding: 20px;
+text-align: center;
+background: #5B4638;
+color: #F3EADF;
+}
+
+img {
+display: block;
+margin: 0 auto;
+max-width: 30%;
+height: auto;
+border-radius: 8px;
+}
