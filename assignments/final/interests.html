@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interests | Xiruitian Pan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header>
+    <h1>Xiruitian Pan</h1>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="interests.html">Interests</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Interests</h2>
+      <p>This page introduces some of my personal interests, including video editing, cats, and motorcycles.</p>
+      <p>Use the filter below to view each category.</p>
+    </section>
+
+    <section class="interest-section">
+      <div class="interest-line"></div>
+
+      <div class="interest-content">
+        <h2>Interest Filter</h2>
+
+        <label for="category-filter">Choose a category:</label>
+        <select id="category-filter" onchange="filterItems(this.value)">
+          <option value="">All</option>
+          <option value="Video Editing">Video Editing</option>
+          <option value="Cat">Cat</option>
+          <option value="Motorcycle">Motorcycle</option>
+        </select>
+
+        <p id="result-count"></p>
+
+        <div id="items-container"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Xiruitian Pan</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
