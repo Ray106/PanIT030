@@ -35,7 +35,7 @@
         <h2>Interest Filter</h2>
 
         <label for="category-filter">Choose a category:</label>
-        <select id="category-filter" onchange="filterItems(this.value)">
+        <select id="category-filter" onchange="filterItems(this.value); gtag('event','interest_filter_change',{'category':this.value})">
           <option value="">All</option>
           <option value="Video Editing">Video Editing</option>
           <option value="Cat">Cat</option>
