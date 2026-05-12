@@ -127,21 +127,6 @@ height: auto;
 border-radius: 8px;
 }
 
-@media (max-width: 800px) {/*what do '@media' do */
-.home_layout {
-flex-direction: column; /* stacks image and text on smaller screens */
-}
-
-.home_main_image {
-height: 350px; /* keeps the image visible without taking the whole mobile page */
-}
-
-.home_content_section {
-padding: 30px; /* reduces padding on smaller screens */
-}
-
-/* start buliding about me page style sheet part */
-
   .about_page{
     max-width:1000px;
     margin: 0 auto;
