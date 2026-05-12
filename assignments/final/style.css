@@ -127,7 +127,7 @@ border-radius: 8px;
 }
 
 @media (max-width: 800px) {/*what do '@media' do */
-.home-layout {
+.home_layout {
 flex-direction: column; /* stacks image and text on smaller screens */
 }
 
