@@ -193,3 +193,10 @@ border-radius: 8px;
 }
 
 /* start building about me page style sheet part */
+
+
+.project_image_link {
+  float: left;
+  margin: 0 20px 10px 0;
+  display: block;
+} /* to work page project image */
