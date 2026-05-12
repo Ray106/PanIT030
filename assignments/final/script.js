@@ -190,7 +190,7 @@ function renderItems(list) {
 }
 
 
-/ ============================================================
+// ============================================================
 //  PART 3 — THE FILTER FUNCTION
 //
 //  This function runs every time the user picks a category
