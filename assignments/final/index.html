@@ -25,7 +25,7 @@
 <header>
 <h1>Xiruitian Pan</h1>
 <nav>
-<a href="index.html" onclick="gtag('event','nav_click',{'link':'home'})">Home</a>
+<a href="index.html" onclick="gtag('event','nav_click',{'link':'home'})">Home</a> <!--when click, js will grab the event and report to GA4 as nav_click /what do this link:home do-->
 <a href="about.html" onclick="gtag('event','nav_click',{'link':'about'})">About</a>
 <a href="work.html" onclick="gtag('event','nav_click',{'link':'work'})">Work</a>
 <a href="interests.html" onclick="gtag('event','nav_click',{'link':'interests'})">Interests</a>
@@ -33,11 +33,11 @@
 </nav>
 </header>
 
-<main class="home-layout"> <!-- New home layout: creates a left image area and a right content area -->
+<main class="home_layout"> <!-- New home layout: creates a left image area and a right content area, created a new layout just for the home page-->
 
-<section class="home-image-section"> <!-- New section: holds the large image on the left side -->
-<img src="images/profile2.JPG" alt="Photo of Xiruitian Pan" class="home-main-image"> <!-- New image: main visual for the homepage -->
-</section>
+<section class="home_image_section"> <!-- New section: holds the large image on the left side -->
+<img src="images/profile2.JPG" alt="Photo of Xiruitian Pan" class="home_main_image"> <!-- New image: main visual for the homepage -->
+</section> <!-- why do i need these two section, aren't them all to crete a section break to put image -->
 
 <section class="home-content-section"> <!-- New section: holds the homepage text on the right side -->
 
@@ -56,7 +56,7 @@
 
 </main>
 
-<footer class="home-footer"> <!-- Changed: class added so the footer can be styled for the homepage -->
+<footer class="footer"> 
 <p>© 2026 Xiruitian Pan</p>
 </footer>
 
