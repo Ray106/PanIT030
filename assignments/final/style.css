@@ -118,6 +118,7 @@ color: #F3EADF;
 }
 
 
+
 img {
 display: block;
 margin: 0 auto;
@@ -139,4 +140,71 @@ height: 350px; /* keeps the image visible without taking the whole mobile page *
 padding: 30px; /* reduces padding on smaller screens */
 }
 
+/* start buliding about me page style sheet part */
+
+  .about_page{
+    max-width:1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .about_title{
+    text-align: center;
+  }
+
+  .about_intro{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about_edu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row-reverse;
+  }
+
+    .about_skills{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .about_text{
+    flex: 1;
+  }
+
+  .about_text h3{
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
+
+  .about_image {
+    flex: 1;
+  }
+
+.about_image img {
+  width: 100%;          /* makes the image fill its image area */
+  max-width: 100%;      /* overrides the global img max-width: 30% */
+  height: 300px;        /* makes all about images the same height */
+  object-fit: cover;    /* crops the image instead of stretching it */
+  border-radius: 8px;   /* keeps the same rounded corner style */
+  display: block;       /* removes small empty space under the image */
+  margin: 0;            /* removes default/global image centering */
 }
+
+  @media (max-width: 800px) {
+  .home_layout {
+    flex-direction: column;
+  }
+
+  .home_main_image {
+    height: 350px;
+  }
+
+  .home_content_section {
+    padding: 30px;
+  }
+}
+
+/* start building about me page style sheet part */
