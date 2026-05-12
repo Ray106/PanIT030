@@ -194,9 +194,20 @@ border-radius: 8px;
 
 /* start building about me page style sheet part */
 
-
 .project_image_link {
   float: left;
+  display: inline-block;
+  width: 240px;
   margin: 0 20px 10px 0;
+  line-height: 0;
+}
+
+.project_img {
+  width: 240px;
+  max-width: 240px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
   display: block;
-} /* to work page project image */
+  margin: 0;
+}
