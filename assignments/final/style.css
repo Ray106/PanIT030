@@ -197,8 +197,8 @@ border-radius: 8px;
 .project_image_link {
   float: right;
   display: inline-block;
-  width: 240px;
-  margin: 0 15px 10px 20px;
+  width: 300px;
+  margin: 0 10px 10px 10px;
   line-height: 0;
 }
 
